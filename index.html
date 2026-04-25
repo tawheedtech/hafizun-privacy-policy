@@ -3,289 +3,600 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for Hafizun – Quran Memorization Help." />
   <title>Privacy Policy - Hafizun</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px;
-      line-height: 1.7;
-      color: #1f2933;
-      background: #ffffff;
+    :root {
+      --bg: #f8faf9;
+      --card: #ffffff;
+      --text: #10201b;
+      --muted: #5f6f6a;
+      --primary: #047857;
+      --primary-dark: #064e3b;
+      --primary-soft: #dff8ee;
+      --border: #dfe9e5;
+      --shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
+      --radius: 18px;
     }
 
-    h1, h2 {
-      color: #064e3b;
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(4, 120, 87, 0.08), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 56px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #064e3b, #0f766e);
+      color: #ffffff;
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
 
     h1 {
-      border-bottom: 2px solid #d1fae5;
-      padding-bottom: 12px;
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.12;
+      letter-spacing: -0.04em;
     }
 
-    .app-name {
-      font-weight: bold;
-      color: #047857;
+    .hero-subtitle {
+      max-width: 760px;
+      margin: 16px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.04rem;
+    }
+
+    .hero-ar {
+      direction: rtl;
+      text-align: right;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 600;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .summary-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card strong {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .summary-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .summary-card.ar {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 14px 0;
+      overflow: hidden;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 20px 0;
+    }
+
+    .number {
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      font-weight: 800;
+      border: 1px solid rgba(4, 120, 87, 0.18);
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 1.15rem;
+      line-height: 1.3;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 14px 20px 20px;
+    }
+
+    .content-grid > div {
+      padding: 4px 18px 0 0;
+    }
+
+    .content-grid > div + div {
+      padding: 4px 0 0 18px;
+      border-left: 1px solid var(--border);
+    }
+
+    .content-grid p {
+      margin: 0 0 12px;
+    }
+
+    .content-grid p:last-child {
+      margin-bottom: 0;
+    }
+
+    .muted {
+      color: var(--muted);
     }
 
     .arabic {
       direction: rtl;
       text-align: right;
-      font-family: Arial, sans-serif;
-    }
-
-    .section {
-      margin-top: 32px;
-      padding-top: 8px;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .note {
-      background: #ecfdf5;
-      border: 1px solid #a7f3d0;
-      border-radius: 10px;
-      padding: 14px;
-      margin: 18px 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
     }
 
     a {
-      color: #047857;
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-soft);
+      border: 1px solid rgba(4, 120, 87, 0.18);
+      border-radius: 999px;
+      padding: 9px 14px;
+      margin-top: 6px;
     }
 
     footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #e5e7eb;
+      margin-top: 28px;
+      color: var(--muted);
+      text-align: center;
       font-size: 0.95rem;
-      color: #4b5563;
+    }
+
+    footer .arabic {
+      text-align: center;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 22px, 980px);
+        padding-top: 18px;
+      }
+
+      .hero {
+        border-radius: 22px;
+        padding: 24px;
+      }
+
+      .summary,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content-grid > div {
+        padding: 0;
+      }
+
+      .content-grid > div + div {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+        padding: 16px 0 0;
+        margin-top: 16px;
+      }
+
+      .section-header {
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>Privacy Policy</h1>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">Hafizun • Privacy Policy</div>
+      <h1>Privacy Policy</h1>
+      <p class="hero-subtitle">
+        Hafizun – Quran Memorization Help is an Islamic Quran memorization and revision application.
+        Your privacy is important to us. This page is provided for app store compliance and user clarity.
+      </p>
+      <p class="hero-ar">
+        حافظون – مساعد حفظ القرآن هو تطبيق إسلامي يساعد على حفظ القرآن الكريم والمراجعة.
+        خصوصيتك مهمة لنا. هذه الصفحة لتوضيح سياسة الخصوصية والامتثال لمتطلبات متاجر التطبيقات.
+      </p>
+    </header>
 
-  <p>
-    <span class="app-name">Hafizun – Quran Memorization Help</span> is an Islamic Quran memorization and revision application.
-    Your privacy is important to us.
-  </p>
+    <section class="summary">
+      <div class="summary-card">
+        <strong>Simple privacy promise</strong>
+        <p>No account, no ads, no tracking, and no sale of personal data.</p>
+      </div>
+      <div class="summary-card ar">
+        <strong>وعد الخصوصية باختصار</strong>
+        <p>لا حسابات، لا إعلانات، لا تتبع، ولا بيع للبيانات الشخصية.</p>
+      </div>
+    </section>
 
-  <p>
-    This page is provided for app store compliance and user clarity.
-  </p>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">1</span>
+        <h2>Information Collection • جمع المعلومات</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            Hafizun does not require users to create an account. We do not collect, store, sell,
+            or share personal information such as your name, email address, phone number,
+            precise location, contacts, photos, payment information, or identification documents.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            لا يتطلب تطبيق حافظون إنشاء حساب. نحن لا نجمع أو نخزن أو نبيع أو نشارك
+            معلومات شخصية مثل الاسم أو البريد الإلكتروني أو رقم الهاتف أو الموقع الدقيق
+            أو جهات الاتصال أو الصور أو معلومات الدفع أو مستندات الهوية.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <p class="arabic">
-    <span class="app-name">حافظون – مساعد حفظ القرآن</span> هو تطبيق إسلامي يساعد على حفظ القرآن الكريم والمراجعة.
-    خصوصيتك مهمة لنا.
-  </p>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">2</span>
+        <h2>Local Data Stored on Your Device • البيانات المحلية على جهازك</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            Hafizun may save app data locally on your device to make the app work properly.
+            This may include memorization progress, review progress, selected language,
+            selected reciter, app settings, onboarding status, accessibility settings such as
+            high contrast mode, and similar preferences.
+          </p>
+          <p class="muted">
+            This data stays on your device. It is not sent to us, and we do not have access to it.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            قد يقوم تطبيق حافظون بحفظ بعض البيانات محليًا على جهازك حتى يعمل التطبيق بشكل صحيح.
+            وقد يشمل ذلك تقدم الحفظ، تقدم المراجعة، اللغة المختارة، القارئ المختار،
+            إعدادات التطبيق، حالة شاشة البداية، إعدادات إمكانية الوصول مثل وضع التباين العالي،
+            وما شابه ذلك من التفضيلات.
+          </p>
+          <p class="muted">
+            تبقى هذه البيانات على جهازك فقط، ولا يتم إرسالها إلينا، ولا نملك إمكانية الوصول إليها.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <p class="arabic">
-    هذه الصفحة لتوضيح سياسة الخصوصية والامتثال لمتطلبات متاجر التطبيقات.
-  </p>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">3</span>
+        <h2>Quran Text • نص القرآن الكريم</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            The Quran text used inside the app is provided for reading, memorization,
+            and revision purposes. The app does not modify the Quran text based on user data.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            نص القرآن الكريم داخل التطبيق مخصص للقراءة والحفظ والمراجعة.
+            ولا يقوم التطبيق بتعديل نص القرآن الكريم بناءً على بيانات المستخدم.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <div class="section">
-    <h2>1. Information Collection • جمع المعلومات</h2>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">4</span>
+        <h2>Internet and Audio Recitation • الإنترنت والتلاوة الصوتية</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            Some app features may require an internet connection, especially Quran audio recitation playback.
+            When you play a recitation, the app may request audio files from an external Quran audio source
+            or server in order to stream or load the selected recitation.
+          </p>
+          <p class="muted">
+            We do not use this audio request to identify you. However, the external server providing the audio
+            may receive standard technical information required to deliver the audio, such as your IP address,
+            device request information, and time of request.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            قد تحتاج بعض ميزات التطبيق إلى اتصال بالإنترنت، خصوصًا تشغيل تلاوة القرآن الصوتية.
+            عند تشغيل التلاوة، قد يطلب التطبيق ملفات صوتية من مصدر أو خادم خارجي لتلاوات القرآن
+            من أجل تشغيل التلاوة المختارة.
+          </p>
+          <p class="muted">
+            نحن لا نستخدم طلبات الصوت للتعرف عليك. ومع ذلك، قد يستقبل الخادم الخارجي الذي يوفر الصوت
+            بعض المعلومات التقنية العادية اللازمة لتقديم الخدمة، مثل عنوان IP ومعلومات طلب الجهاز ووقت الطلب.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      Hafizun does not require users to create an account. We do not collect, store, sell, or share personal information such as your name, email address, phone number, precise location, contacts, photos, payment information, or identification documents.
-    </p>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">5</span>
+        <h2>Data Usage and Sharing • استخدام البيانات ومشاركتها</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            We do not sell user data. We do not share personal data with advertisers, data brokers,
+            or marketing companies. We do not use your memorization progress for advertising or tracking.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            نحن لا نبيع بيانات المستخدمين. ولا نشارك البيانات الشخصية مع المعلنين أو وسطاء البيانات
+            أو شركات التسويق. ولا نستخدم تقدم الحفظ الخاص بك للإعلانات أو التتبع.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <p class="arabic">
-      لا يتطلب تطبيق حافظون إنشاء حساب. نحن لا نجمع أو نخزن أو نبيع أو نشارك معلومات شخصية مثل الاسم أو البريد الإلكتروني أو رقم الهاتف أو الموقع الدقيق أو جهات الاتصال أو الصور أو معلومات الدفع أو مستندات الهوية.
-    </p>
-  </div>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">6</span>
+        <h2>Analytics, Ads, and Tracking • التحليلات والإعلانات والتتبع</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            Hafizun does not currently use advertising SDKs, tracking SDKs, or third-party analytics tools
+            that collect personal user data.
+          </p>
+          <p class="muted">
+            If this changes in a future version, this Privacy Policy will be updated before or alongside
+            the release of that version.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            لا يستخدم تطبيق حافظون حاليًا حِزم إعلانات أو حِزم تتبع أو أدوات تحليلات تابعة لجهات خارجية
+            تقوم بجمع بيانات شخصية للمستخدمين.
+          </p>
+          <p class="muted">
+            إذا تغير ذلك في إصدار مستقبلي، فسيتم تحديث سياسة الخصوصية هذه قبل إصدار ذلك التحديث
+            أو بالتزامن معه.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <div class="section">
-    <h2>2. Local Data Stored on Your Device • البيانات المحلية على جهازك</h2>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">7</span>
+        <h2>Permissions • الأذونات</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            Hafizun may use internet access to load Quran audio recitations. The app does not require access
+            to sensitive permissions such as camera, microphone, contacts, precise location, or photos for its
+            current core functionality.
+          </p>
+          <p class="muted">
+            If future features require additional permissions, they will be requested only when needed and this
+            Privacy Policy will be updated.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            قد يستخدم تطبيق حافظون الاتصال بالإنترنت لتحميل تلاوات القرآن الصوتية. ولا يتطلب التطبيق الوصول
+            إلى أذونات حساسة مثل الكاميرا أو الميكروفون أو جهات الاتصال أو الموقع الدقيق أو الصور في وظائفه
+            الأساسية الحالية.
+          </p>
+          <p class="muted">
+            إذا احتاجت ميزات مستقبلية إلى أذونات إضافية، فسيتم طلبها فقط عند الحاجة،
+            وسيتم تحديث سياسة الخصوصية هذه.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      Hafizun may save app data locally on your device to make the app work properly. This may include memorization progress, review progress, selected language, selected reciter, app settings, onboarding status, accessibility settings such as high contrast mode, and similar preferences.
-    </p>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">8</span>
+        <h2>Children’s Privacy • خصوصية الأطفال</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            Hafizun is suitable for general Islamic learning and Quran memorization. We do not knowingly collect
+            personal information from children or from any user.
+          </p>
+          <p class="muted">
+            If a parent or guardian believes that personal information has been provided through the app,
+            please contact us and we will address the matter.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            تطبيق حافظون مناسب للتعلم الإسلامي العام وحفظ القرآن الكريم. نحن لا نجمع عن علم معلومات شخصية
+            من الأطفال أو من أي مستخدم.
+          </p>
+          <p class="muted">
+            إذا اعتقد ولي الأمر أن معلومات شخصية قد تم تقديمها من خلال التطبيق،
+            فيرجى التواصل معنا وسنعالج الأمر.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      This data stays on your device. It is not sent to us, and we do not have access to it.
-    </p>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">9</span>
+        <h2>Data Deletion • حذف البيانات</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            Since Hafizun stores progress and settings locally on your device, you can delete this data by clearing
+            the app data from your device settings or uninstalling the app.
+          </p>
+          <p class="muted">
+            Because we do not store your local progress on our servers, we cannot recover deleted local data.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            نظرًا لأن تطبيق حافظون يحفظ التقدم والإعدادات محليًا على جهازك، يمكنك حذف هذه البيانات من خلال
+            مسح بيانات التطبيق من إعدادات الجهاز أو حذف التطبيق.
+          </p>
+          <p class="muted">
+            وبما أننا لا نخزن تقدمك المحلي على خوادمنا، فلا يمكننا استرجاع البيانات المحلية بعد حذفها.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <p class="arabic">
-      قد يقوم تطبيق حافظون بحفظ بعض البيانات محليًا على جهازك حتى يعمل التطبيق بشكل صحيح. وقد يشمل ذلك تقدم الحفظ، تقدم المراجعة، اللغة المختارة، القارئ المختار، إعدادات التطبيق، حالة شاشة البداية، إعدادات إمكانية الوصول مثل وضع التباين العالي، وما شابه ذلك من التفضيلات.
-    </p>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">10</span>
+        <h2>Security • الأمان</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            We aim to keep the app simple and privacy-friendly by avoiding user accounts and avoiding unnecessary
+            collection of personal data. Local data is stored on your device using normal device storage mechanisms.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            نهدف إلى جعل التطبيق بسيطًا ومحافظًا على الخصوصية من خلال عدم طلب حسابات مستخدمين وعدم جمع بيانات
+            شخصية غير ضرورية. ويتم حفظ البيانات المحلية على جهازك باستخدام آليات التخزين العادية في الجهاز.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <p class="arabic">
-      تبقى هذه البيانات على جهازك فقط. ولا يتم إرسالها إلينا، ولا نملك إمكانية الوصول إليها.
-    </p>
-  </div>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">11</span>
+        <h2>Changes to This Privacy Policy • التعديلات على سياسة الخصوصية</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>
+            We may update this Privacy Policy from time to time. Any changes will be posted on this page with
+            an updated date.
+          </p>
+        </div>
+        <div class="arabic">
+          <p>
+            قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. وسيتم نشر أي تغييرات في هذه الصفحة مع تحديث تاريخ آخر تعديل.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <div class="section">
-    <h2>3. Quran Text • نص القرآن الكريم</h2>
+    <section class="section-card">
+      <div class="section-header">
+        <span class="number">12</span>
+        <h2>Contact • التواصل</h2>
+      </div>
+      <div class="content-grid">
+        <div>
+          <p>If you have any questions about this Privacy Policy, you can contact us at:</p>
+          <p class="contact-box">
+            <a href="mailto:tawheed.tech.bh@gmail.com">tawheed.tech.bh@gmail.com</a>
+          </p>
+        </div>
+        <div class="arabic">
+          <p>إذا كان لديك أي سؤال حول سياسة الخصوصية، يمكنك التواصل معنا عبر:</p>
+          <p class="contact-box">
+            <a href="mailto:tawheed.tech.bh@gmail.com">tawheed.tech.bh@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      The Quran text used inside the app is provided for reading, memorization, and revision purposes. The app does not modify the Quran text based on user data.
-    </p>
-
-    <p class="arabic">
-      نص القرآن الكريم داخل التطبيق مخصص للقراءة والحفظ والمراجعة. ولا يقوم التطبيق بتعديل نص القرآن الكريم بناءً على بيانات المستخدم.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>4. Internet and Audio Recitation • الإنترنت والتلاوة الصوتية</h2>
-
-    <p>
-      Some app features may require an internet connection, especially Quran audio recitation playback. When you play a recitation, the app may request audio files from an external Quran audio source or server in order to stream or load the selected recitation.
-    </p>
-
-    <p>
-      We do not use this audio request to identify you. However, the external server providing the audio may receive standard technical information required to deliver the audio, such as your IP address, device request information, and time of request.
-    </p>
-
-    <p class="arabic">
-      قد تحتاج بعض ميزات التطبيق إلى اتصال بالإنترنت، خصوصًا تشغيل تلاوة القرآن الصوتية. عند تشغيل التلاوة، قد يطلب التطبيق ملفات صوتية من مصدر أو خادم خارجي لتلاوات القرآن من أجل تشغيل التلاوة المختارة.
-    </p>
-
-    <p class="arabic">
-      نحن لا نستخدم طلبات الصوت للتعرف عليك. ومع ذلك، قد يستقبل الخادم الخارجي الذي يوفر الصوت بعض المعلومات التقنية العادية اللازمة لتقديم الخدمة، مثل عنوان IP ومعلومات طلب الجهاز ووقت الطلب.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>5. Data Usage and Sharing • استخدام البيانات ومشاركتها</h2>
-
-    <p>
-      We do not sell user data. We do not share personal data with advertisers, data brokers, or marketing companies. We do not use your memorization progress for advertising or tracking.
-    </p>
-
-    <p class="arabic">
-      نحن لا نبيع بيانات المستخدمين. ولا نشارك البيانات الشخصية مع المعلنين أو وسطاء البيانات أو شركات التسويق. ولا نستخدم تقدم الحفظ الخاص بك للإعلانات أو التتبع.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>6. Analytics, Ads, and Tracking • التحليلات والإعلانات والتتبع</h2>
-
-    <p>
-      Hafizun does not currently use advertising SDKs, tracking SDKs, or third-party analytics tools that collect personal user data.
-    </p>
-
-    <p>
-      If this changes in a future version, this Privacy Policy will be updated before or alongside the release of that version.
-    </p>
-
-    <p class="arabic">
-      لا يستخدم تطبيق حافظون حاليًا حِزم إعلانات أو حِزم تتبع أو أدوات تحليلات تابعة لجهات خارجية تقوم بجمع بيانات شخصية للمستخدمين.
-    </p>
-
-    <p class="arabic">
-      إذا تغير ذلك في إصدار مستقبلي، فسيتم تحديث سياسة الخصوصية هذه قبل إصدار ذلك التحديث أو بالتزامن معه.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>7. Permissions • الأذونات</h2>
-
-    <p>
-      Hafizun may use internet access to load Quran audio recitations. The app does not require access to sensitive permissions such as camera, microphone, contacts, precise location, or photos for its current core functionality.
-    </p>
-
-    <p>
-      If future features require additional permissions, they will be requested only when needed and this Privacy Policy will be updated.
-    </p>
-
-    <p class="arabic">
-      قد يستخدم تطبيق حافظون الاتصال بالإنترنت لتحميل تلاوات القرآن الصوتية. ولا يتطلب التطبيق الوصول إلى أذونات حساسة مثل الكاميرا أو الميكروفون أو جهات الاتصال أو الموقع الدقيق أو الصور في وظائفه الأساسية الحالية.
-    </p>
-
-    <p class="arabic">
-      إذا احتاجت ميزات مستقبلية إلى أذونات إضافية، فسيتم طلبها فقط عند الحاجة، وسيتم تحديث سياسة الخصوصية هذه.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>8. Children’s Privacy • خصوصية الأطفال</h2>
-
-    <p>
-      Hafizun is suitable for general Islamic learning and Quran memorization. We do not knowingly collect personal information from children or from any user.
-    </p>
-
-    <p>
-      If a parent or guardian believes that personal information has been provided through the app, please contact us and we will address the matter.
-    </p>
-
-    <p class="arabic">
-      تطبيق حافظون مناسب للتعلم الإسلامي العام وحفظ القرآن الكريم. نحن لا نجمع عن علم معلومات شخصية من الأطفال أو من أي مستخدم.
-    </p>
-
-    <p class="arabic">
-      إذا اعتقد ولي الأمر أن معلومات شخصية قد تم تقديمها من خلال التطبيق، فيرجى التواصل معنا وسنعالج الأمر.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>9. Data Deletion • حذف البيانات</h2>
-
-    <p>
-      Since Hafizun stores progress and settings locally on your device, you can delete this data by clearing the app data from your device settings or uninstalling the app.
-    </p>
-
-    <p>
-      Because we do not store your local progress on our servers, we cannot recover deleted local data.
-    </p>
-
-    <p class="arabic">
-      نظرًا لأن تطبيق حافظون يحفظ التقدم والإعدادات محليًا على جهازك، يمكنك حذف هذه البيانات من خلال مسح بيانات التطبيق من إعدادات الجهاز أو حذف التطبيق.
-    </p>
-
-    <p class="arabic">
-      وبما أننا لا نخزن تقدمك المحلي على خوادمنا، فلا يمكننا استرجاع البيانات المحلية بعد حذفها.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>10. Security • الأمان</h2>
-
-    <p>
-      We aim to keep the app simple and privacy-friendly by avoiding user accounts and avoiding unnecessary collection of personal data. Local data is stored on your device using normal device storage mechanisms.
-    </p>
-
-    <p class="arabic">
-      نهدف إلى جعل التطبيق بسيطًا ومحافظًا على الخصوصية من خلال عدم طلب حسابات مستخدمين وعدم جمع بيانات شخصية غير ضرورية. ويتم حفظ البيانات المحلية على جهازك باستخدام آليات التخزين العادية في الجهاز.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>11. Changes to This Privacy Policy • التعديلات على سياسة الخصوصية</h2>
-
-    <p>
-      We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.
-    </p>
-
-    <p class="arabic">
-      قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. وسيتم نشر أي تغييرات في هذه الصفحة مع تحديث تاريخ آخر تعديل.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>12. Contact • التواصل</h2>
-
-    <p>
-      If you have any questions about this Privacy Policy, you can contact us at:
-    </p>
-
-    <p>
-      <a href="mailto:tawheed.tech.bh@gmail.com">tawheed.tech.bh@gmail.com</a>
-    </p>
-
-    <p class="arabic">
-      إذا كان لديك أي سؤال حول سياسة الخصوصية، يمكنك التواصل معنا عبر:
-    </p>
-
-    <p class="arabic">
-      <a href="mailto:tawheed.tech.bh@gmail.com">tawheed.tech.bh@gmail.com</a>
-    </p>
-  </div>
-
-  <footer>
-    <p>Last updated: 2026-04-25</p>
-    <p class="arabic">آخر تحديث: 2026-04-25</p>
-  </footer>
+    <footer>
+      <div>Last updated: 2026-04-25</div>
+      <div class="arabic">آخر تحديث: 2026-04-25</div>
+    </footer>
+  </main>
 </body>
 </html>
