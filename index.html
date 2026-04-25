@@ -66,26 +66,47 @@
       margin-bottom: 14px;
     }
 
-    h1 {
+    .hero-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .hero-en {
+      min-width: 0;
+    }
+
+    h1,
+    .hero-title-ar {
       margin: 0;
       font-size: clamp(2rem, 5vw, 3.4rem);
       line-height: 1.12;
+      font-weight: 800;
+    }
+
+    h1 {
       letter-spacing: -0.04em;
     }
 
-    .hero-subtitle {
-      max-width: 760px;
+    .hero-title-ar {
+      color: #ffffff;
+      letter-spacing: 0;
+    }
+
+    .hero-subtitle,
+    .hero-ar p {
       margin: 16px 0 0;
       color: rgba(255, 255, 255, 0.9);
       font-size: 1.04rem;
     }
 
     .hero-ar {
+      min-width: 0;
       direction: rtl;
       text-align: right;
-      margin-top: 18px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      padding-left: 28px;
+      border-left: 1px solid rgba(255, 255, 255, 0.18);
       color: rgba(255, 255, 255, 0.92);
       font-weight: 600;
     }
@@ -132,14 +153,14 @@
     }
 
     .section-header {
-      display: flex;
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
       align-items: center;
       gap: 12px;
       padding: 18px 20px 0;
     }
 
     .number {
-      flex: 0 0 auto;
       width: 34px;
       height: 34px;
       border-radius: 50%;
@@ -151,11 +172,25 @@
       border: 1px solid rgba(4, 120, 87, 0.18);
     }
 
+    .section-title-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 36px;
+      align-items: center;
+      width: 100%;
+    }
+
     h2 {
       margin: 0;
       color: var(--primary-dark);
       font-size: 1.15rem;
       line-height: 1.3;
+    }
+
+    .section-title-ar {
+      direction: rtl;
+      text-align: right;
+      font-weight: 800;
     }
 
     .content-grid {
@@ -238,6 +273,18 @@
         padding: 24px;
       }
 
+      .hero-top {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .hero-ar {
+        padding-left: 0;
+        padding-top: 18px;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
       .summary,
       .content-grid {
         grid-template-columns: 1fr;
@@ -257,6 +304,15 @@
       .section-header {
         align-items: flex-start;
       }
+
+      .section-title-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .section-title-ar {
+        text-align: right;
+      }
     }
   </style>
 </head>
@@ -265,15 +321,23 @@
   <main class="page">
     <header class="hero">
       <div class="eyebrow">Hafizun • Privacy Policy</div>
-      <h1>Privacy Policy</h1>
-      <p class="hero-subtitle">
-        Hafizun – Quran Memorization Help is an Islamic Quran memorization and revision application.
-        Your privacy is important to us. This page is provided for app store compliance and user clarity.
-      </p>
-      <p class="hero-ar">
-        حافظون – مساعد حفظ القرآن هو تطبيق إسلامي يساعد على حفظ القرآن الكريم والمراجعة.
-        خصوصيتك مهمة لنا. هذه الصفحة لتوضيح سياسة الخصوصية والامتثال لمتطلبات متاجر التطبيقات.
-      </p>
+      <div class="hero-top">
+        <div class="hero-en">
+          <h1>Privacy Policy</h1>
+          <p class="hero-subtitle">
+            Hafizun – Quran Memorization Help is an Islamic Quran memorization and revision application.
+            Your privacy is important to us. This page is provided for app store compliance and user clarity.
+          </p>
+        </div>
+
+        <div class="hero-ar">
+          <div class="hero-title-ar">سياسة الخصوصية</div>
+          <p>
+            حافظون – مساعد حفظ القرآن هو تطبيق إسلامي يساعد على حفظ القرآن الكريم والمراجعة.
+            خصوصيتك مهمة لنا. هذه الصفحة لتوضيح سياسة الخصوصية والامتثال لمتطلبات متاجر التطبيقات.
+          </p>
+        </div>
+      </div>
     </header>
 
     <section class="summary">
@@ -290,7 +354,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">1</span>
-        <h2>Information Collection • جمع المعلومات</h2>
+        <div class="section-title-grid">
+          <h2>Information Collection</h2>
+          <h2 class="section-title-ar">جمع المعلومات</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -313,7 +380,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">2</span>
-        <h2>Local Data Stored on Your Device • البيانات المحلية على جهازك</h2>
+        <div class="section-title-grid">
+          <h2>Local Data Stored on Your Device</h2>
+          <h2 class="section-title-ar">البيانات المحلية على جهازك</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -344,7 +414,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">3</span>
-        <h2>Quran Text • نص القرآن الكريم</h2>
+        <div class="section-title-grid">
+          <h2>Quran Text</h2>
+          <h2 class="section-title-ar">نص القرآن الكريم</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -365,7 +438,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">4</span>
-        <h2>Internet and Audio Recitation • الإنترنت والتلاوة الصوتية</h2>
+        <div class="section-title-grid">
+          <h2>Internet and Audio Recitation</h2>
+          <h2 class="section-title-ar">الإنترنت والتلاوة الصوتية</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -397,7 +473,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">5</span>
-        <h2>Data Usage and Sharing • استخدام البيانات ومشاركتها</h2>
+        <div class="section-title-grid">
+          <h2>Data Usage and Sharing</h2>
+          <h2 class="section-title-ar">استخدام البيانات ومشاركتها</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -418,7 +497,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">6</span>
-        <h2>Analytics, Ads, and Tracking • التحليلات والإعلانات والتتبع</h2>
+        <div class="section-title-grid">
+          <h2>Analytics, Ads, and Tracking</h2>
+          <h2 class="section-title-ar">التحليلات والإعلانات والتتبع</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -447,7 +529,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">7</span>
-        <h2>Permissions • الأذونات</h2>
+        <div class="section-title-grid">
+          <h2>Permissions</h2>
+          <h2 class="section-title-ar">الأذونات</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -478,7 +563,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">8</span>
-        <h2>Children’s Privacy • خصوصية الأطفال</h2>
+        <div class="section-title-grid">
+          <h2>Children’s Privacy</h2>
+          <h2 class="section-title-ar">خصوصية الأطفال</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -507,7 +595,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">9</span>
-        <h2>Data Deletion • حذف البيانات</h2>
+        <div class="section-title-grid">
+          <h2>Data Deletion</h2>
+          <h2 class="section-title-ar">حذف البيانات</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -534,7 +625,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">10</span>
-        <h2>Security • الأمان</h2>
+        <div class="section-title-grid">
+          <h2>Security</h2>
+          <h2 class="section-title-ar">الأمان</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -555,7 +649,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">11</span>
-        <h2>Changes to This Privacy Policy • التعديلات على سياسة الخصوصية</h2>
+        <div class="section-title-grid">
+          <h2>Changes to This Privacy Policy</h2>
+          <h2 class="section-title-ar">التعديلات على سياسة الخصوصية</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
@@ -575,7 +672,10 @@
     <section class="section-card">
       <div class="section-header">
         <span class="number">12</span>
-        <h2>Contact • التواصل</h2>
+        <div class="section-title-grid">
+          <h2>Contact</h2>
+          <h2 class="section-title-ar">التواصل</h2>
+        </div>
       </div>
       <div class="content-grid">
         <div>
